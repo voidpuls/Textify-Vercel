@@ -14,7 +14,7 @@ export const SocketContextProvider = ({children}) => {
     const [onlineUsers, setOnlineUsers] = useState([]);
 
     useEffect(() => {
-        const socket = io('https://textify-vercel.vercel.app',{
+        const socket = io(window.location.origin,{
             query: {
                 userId: user?._id
             }
